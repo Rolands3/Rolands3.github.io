@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+/* Nav bar */
+#navbar {
+    background-color: #0F1D40;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5%;
+    overflow: hidden;
+   
+}
+
+#navbar li {
+    float: left;
+    border-right: 1px solid #FFFFFF;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #2F4294;
+}
+
+#navbar .active {
+    background-color: #2F4294;
+}
+
+/* Home page */
+#home_page {
+    flex-direction: column;
+    align-items: center;
+    height: 96vh;
+    border: 1px solid red;
+    background-color: #5C7EB7;
+}
+
+#home_page #main_picture {
+    height: 55vh;
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home_page #main_picture #main_picture_image {
+    border: 1px solid red;
+    width: 70%;
+    height: 40vh;
+}
+
+#home_page #home_page_choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40vh;
+    border: 1px solid red;
+    width: 100%;
+}
+
+#home_page #home_page_choices .clickable_page {
+    height: 30vh;
+    width: 40vh;
+    border: 1px solid red; 
+}
+
+/* Map page */
+#map_page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    border: 1px solid red;
+    background-color: #5C7EB7;
+}
+
+#map_page #map_page_image {
+    border: 1px solid red;
+    width: 80%;
+    height: 80%;
+    background-color: bisque;
+}
+
+/* Destination Page */
+#destinations_page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+#destinations_page .top_row {
+    margin-top: 5%;
+}
+
+#destinations_page .row {
+    display: flex; 
+    justify-content: space-evenly; 
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+#destinations_page .destination_image {
+    border: 1px solid red;
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#destinations_page .destinations_page {
+    flex-direction: row;
+}
+
+/* About creator page */
+#about_creator_page {
+
+}
+
+/* Baldone page */
+#baldone_page {
+
+}
+
+/* Baldone page */
+#kekava_page {
+    
+}
+
+/* On the road object page */
+#on_the_road_object_page {
+    
+}
+
+/* Riga page */
+#riga_page {
+    
+}
