@@ -1,3 +1,19 @@
+document.getElementById('theme-icon').addEventListener('click', function() {
+  
+  const icon = document.getElementById('theme-icon');
+  if (icon.classList.contains('dark-mode')) {
+      icon.classList.remove('dark-mode');
+      icon.innerHTML = '';
+      // Add code to switch to light mode
+  } else {
+      icon.classList.add('dark-mode');
+      icon.innerHTML = '';
+      // Add code to switch to dark mode
+
+      
+  }
+});
+
 function saveLightingMode(mode) 
 { 
   localStorage.setItem("mode", mode);
@@ -42,13 +58,14 @@ function showContainer(container)
     show(selectedContainer); 
   }
 }
-/*
+
 window.onload = function() {
+  /*
   var savedMode = localStorage.getItem("mode");
   if (savedMode) {
     setLightingMode(savedMode);
   } else {
     setLightingMode('light');
   }
+  */
 };
-*/

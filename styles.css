@@ -1,31 +1,50 @@
-* {
-    box-sizing: border-box;
+body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    background-color: #F5EFEF;
 }
 
-.container {
-    display: flex;
+.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_header_text {
+    font-size: 48px;
+}
+
+.paragraph_text {
+    font-size: 24px;
+    color: #FFFFFF;
 }
 
 /* Nav bar */
 #navbar {
+    display: flex;
     background-color: #0F1D40;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 #navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0.5%;
-    overflow: hidden;
-   
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 2px 0 2px 0;
 }
 
 #navbar li {
-    float: left;
     border-right: 1px solid #FFFFFF;
 }
 
@@ -38,124 +57,222 @@
 }
 
 #navbar li a:hover {
-    background-color: #2F4294;
+    color: #a3a4ad;
 }
 
-#navbar .active {
-    background-color: #2F4294;
+#navbar .icon-container {
+    margin-left: auto;
+    padding: 0 16px; 
+    display: flex;
+    align-items: center;
+    border-right: none;
+}
+
+#navbar .icon-container svg {
+    fill: #FFFFFF;
+    width: 24px;
+    height: 24px;
 }
 
 /* Home page */
-#home_page {
-    flex-direction: column;
-    align-items: center;
-    height: 96vh;
-    border: 1px solid red;
-    background-color: #5C7EB7;
-}
 
-#home_page #main_picture {
-    height: 55vh;
-    border: 1px solid red;
-    width: 100%;
+    /* Title picture */
+    #home_page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #home_page_main_picture {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background-image: url("fire.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home_page_main_picture .image_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+    #home_page_main_picture .main_picture_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Clickable images */
+    #map {
+        background: url("fire.jpg");
+    }
+
+    #destinations {
+        background: url("fire.jpg");
+    }
+
+    #about_creator {
+        background: url("fire.jpg");
+    }
+
+    #home_page_choices {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #home_page_choices .clickable_page {
+        position: relative;
+        flex: 1 1 300px; 
+        max-width: 400px;
+        height: 30vh;
+        margin: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #home_page_choices .clickable_page .image_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #home_page_choices .clickable_page .image_overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #home_page_choices .clickable_page .image_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #home_page_choices .clickable_page:hover .image_overlay {
+        transform: scale(1.1); 
+    }
+
+    #home_page_choices .clickable_page:hover {
+        transform: scale(1.05); 
+    }
+
+/* Destinations */
+#destinations_page {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-#home_page #main_picture #main_picture_image {
-    border: 1px solid red;
-    width: 70%;
-    height: 40vh;
-}
-
-#home_page #home_page_choices {
+#destinations_page .destination_row {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 40vh;
-    border: 1px solid red;
-    width: 100%;
-}
-
-#home_page #home_page_choices .clickable_page {
-    height: 30vh;
-    width: 40vh;
-    border: 1px solid red; 
-}
-
-/* Map page */
-#map_page {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 95vh;
-    border: 1px solid red;
-    background-color: #5C7EB7;
-}
-
-#map_page #map_page_image {
-    border: 1px solid red;
-    width: 80%;
-    height: 80%;
-    background-color: bisque;
-}
-
-/* Destination Page */
-#destinations_page {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-}
-
-#destinations_page .top_row {
-    margin-top: 5%;
-}
-
-#destinations_page .row {
-    display: flex; 
-    justify-content: space-evenly; 
-    width: 100%;
-    margin-bottom: 10%;
 }
 
 #destinations_page .destination_image {
-    border: 1px solid red;
-    width: 30vh;
-    height: 30vh;
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50vh;
+    text-align: center;
+    background-image: url("fire.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-#destinations_page .destinations_page {
-    flex-direction: row;
+#destinations_page .destination_image .main_header_text {
+    color: white;
 }
 
-/* About creator page */
-#about_creator_page {
-
+#destinations_page .image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
 }
 
-/* Baldone page */
-#baldone_page {
-
+#destinations_page .hover_text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Baldone page */
-#kekava_page {
-    
+#destinations_page .destination_image:hover .image_overlay {
+    background: rgba(0, 0, 0, 0.7);
 }
 
-/* On the road object page */
-#on_the_road_object_page {
-    
+#destinations_page .destination_image:hover .hover_text {
+    opacity: 1;
 }
 
-/* Riga page */
-#riga_page {
-    
+
+/* About author page */
+
+
+
+/* Map page */
+#map_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map_page #map_page_header {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+#map_page #map_page_text {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+#map_page #map_page_image {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    width: 90%;
+    height: 80vh;
+    background-image: url("fire.jpg");
+    background-size: cover;
+    background-position: center;
 }
