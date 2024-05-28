@@ -68,12 +68,6 @@ body {
     border-right: none;
 }
 
-#navbar .icon-container svg {
-    fill: #FFFFFF;
-    width: 24px;
-    height: 24px;
-}
-
 /* Home page */
 
     /* Title picture */
@@ -139,7 +133,7 @@ body {
     #home_page_choices .clickable_page {
         position: relative;
         flex: 1 1 300px; 
-        max-width: 400px;
+        max-width: 500px;
         height: 30vh;
         margin: 10px;
         overflow: hidden;
@@ -248,7 +242,35 @@ body {
 
 /* About author page */
 
+#about_author_page {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 100%;
+}
 
+#about_author_page .main_header_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+#about_author_page .about_author_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.about_author_info #about_author_image {
+    width: 50%;
+}
+
+.about_author_info #about_author_text {
+    width: 50%;
+}
 
 /* Map page */
 #map_page {
@@ -272,6 +294,54 @@ body {
     margin-bottom: 5vh;
     width: 90%;
     height: 80vh;
+    background-image: url("fire.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Object pages */
+.object_page {
+    display: flex;
+    flex-direction: column;
+}
+
+.object_section {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+}
+
+.object_section .picture {
+    width: 50%;
+}
+
+.object_section .info_panel {
+    width: 50%;
+}
+
+.object_section .info_panel .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    text-align: center;
+    font-size: 48px;
+}
+
+.object_section .odd {
+   background-color: #7894dd;
+}
+
+.object_section .info_panel .text {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 24px;
+}
+
+.object_section .picture {
     background-image: url("fire.jpg");
     background-size: cover;
     background-position: center;
