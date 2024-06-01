@@ -24,40 +24,87 @@
                         <line x1="21" x2="23" y1="12" y2="12"/>
                         <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"/>
                         <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"/>
-                      </svg>
+                    </svg>
                 </li>
-            </ul> 
+            </ul>
+        </div>
+
+        <div id="sidebar" class="sidebar">
+           <ul>
+                <li><a href="#galvena_lapa" onclick="showContainer('home_page')">Sākuma lapa</a></li>
+                <li><a href="#galapunkti" onclick="showContainer('destinations_page')">Galapunkti</a></li>
+                <li><a href="#par_autoru" onclick="showContainer('about_author_page')">Par autoru</a></li>
+                <li id="theme_icon" class="icon-container">
+                    <svg fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" x2="12" y1="1" y2="3"/>
+                        <line x1="12" x2="12" y1="21" y2="23"/>
+                        <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"/>
+                        <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"/>
+                        <line x1="1" x2="3" y1="12" y2="12"/>
+                        <line x1="21" x2="23" y1="12" y2="12"/>
+                        <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"/>
+                        <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"/>
+                    </svg>
+                </li>
+                <li id="hamburger_icon" class="icon-container">
+                    <svg fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" onclick="toggleSidebar()">
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </li>
+            </ul>
         </div>
 
         <div id="home_page" class="container">
+
             <div id="home_page_main_picture">
+
                 <div class="main_picture_overlay">
+
                     <div class="image_text main_header_text">
                         Mans ceļš uz LU
-                        <p class="paragraph_text"></p>
                     </div>
+
                 </div>
             </div>
             
             <div id="home_page_choices">
-                <div id="map" class="clickable_page" onclick="showContainer('map_page')">
-                    <div class="image_overlay">
-                        <div class="image_text">Ceļa karte</div>
-                    </div>
-                </div>
-                <div id="destinations" class="clickable_page" onclick="showContainer('destinations_page')">
-                    <div class="image_overlay">
-                        <div class="image_text">Apskates objekti</div>
-                    </div>
-                </div>
-                <div id="about_creator" class="clickable_page" onclick="showContainer('about_author_page')">
-                    <div class="image_overlay">
-                        <div class="image_text">Par autoru</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+                <div id="map" class="clickable_page" onclick="showContainer('map_page')">
+
+                    <div class="image_overlay">
+
+                        <div class="image_text">Ceļa karte</div>
+
+                    </div>
+
+                </div>
+
+                <div id="destinations" class="clickable_page" onclick="showContainer('destinations_page')">
+
+                    <div class="image_overlay">
+
+                        <div class="image_text">Apskates objekti</div>
+
+                    </div>
+
+                </div>
+
+                <div id="about_creator" class="clickable_page" onclick="showContainer('about_author_page')">
+
+                    <div class="image_overlay">
+
+                        <div class="image_text">Par autoru</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <div id="map_page" class="container" style="display: none;">
 
@@ -69,7 +116,8 @@
                 Ceļojumam ir svarīgs novirziens.
             </div>
 
-            <div id="map_page_image"></div>
+            <div id="map_page_image">
+            </div>
 
         </div>
 
@@ -123,17 +171,17 @@
             </div>
         </div>
 
-        <div id="about_author_page" class="container" style="display: none; border: 1px solid red;">
+        <div id="about_author_page" class="container" style="display: none;">
             
-            <div class="main_header_text" style="border: 1px solid red;">Par autoru</div>
+            <div class="main_header_text">Par autoru</div>
 
             <div class="about_author_info">
 
-                <div id="about_author_text" style="border: 1px solid red;">
+                <div id="about_author_text">
                     Esmu LU 3.kursa students. 
                 </div>
 
-                <div id="about_author_image" style="border: 1px solid red;"></div>
+                <div id="about_author_image"></div>
 
             </div>
 
@@ -142,7 +190,7 @@
         <!-- Baldone -->
         <div id="baldone_page" class="container object_page" style="display: none;">
 
-            <div id="baldone_church" class="object_section">
+            <div id="baldone_church" class="object_section odd_section">
 
                 <div class="info_panel odd">
 
@@ -162,13 +210,15 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
             <div id="baldone_school" class="object_section">
  
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
                 <div class="info_panel">
 
@@ -190,7 +240,7 @@
 
             </div>
 
-            <div id="baldone_gas_station" class="object_section">
+            <div id="baldone_gas_station" class="object_section odd_section">
                 
                 <div class="info_panel odd">
 
@@ -210,7 +260,8 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
@@ -240,13 +291,15 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
             <div id="kekava_liba" class="object_section">
  
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
                 <div class="info_panel">
 
@@ -288,7 +341,8 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
@@ -318,13 +372,15 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
             <div id="objects_between_highway" class="object_section">
  
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
                 <div class="info_panel">
 
@@ -366,7 +422,8 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
@@ -395,13 +452,15 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
             <div id="riga_origo" class="object_section">
  
-                <div class="picture"></div>
+                <div class="picture">  
+                </div>
 
                 <div class="info_panel">
 
@@ -443,7 +502,8 @@
 
                 </div>
 
-                <div class="picture"></div>
+                <div class="picture">
+                </div>
 
             </div>
 
