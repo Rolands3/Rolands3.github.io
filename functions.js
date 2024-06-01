@@ -143,7 +143,7 @@ function showContainer(container)
   {
     window.scrollTo(0, 0);
     show(selectedContainer);
-    localStorage.setItem('container', container);
+    sessionStorage.setItem('container', container);
   }
 }
 
@@ -166,7 +166,7 @@ document.getElementById('theme_icon').addEventListener('click', function()
                         <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"/>\n\
                       </svg>';
     setDarkMode();
-    localStorage.setItem('mode', 'dark-mode');
+    sessionStorage.setItem('mode', 'dark-mode');
   } 
   else 
   {
@@ -175,7 +175,7 @@ document.getElementById('theme_icon').addEventListener('click', function()
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>\n\
                       </svg>';
     setLightMode();
-    localStorage.setItem('mode', 'light-mode');    
+    sessionStorage.setItem('mode', 'light-mode');    
   }
 });
 
@@ -190,8 +190,8 @@ function toggleSidebar() {
 
 window.onload = function() 
 { 
-  var savedMode = localStorage.getItem('mode');
-  var savedContainer = localStorage.getItem('container');
+  var savedMode = sessionStorage.getItem('mode');
+  var savedContainer = sessionStorage.getItem('container');
 
   const icon = document.getElementById('theme_icon');
 
