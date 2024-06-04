@@ -3,6 +3,11 @@
     <head>
         <title>Mans ceļš uz LU</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="about_author.css">
+        <link rel="stylesheet" href="destination_page.css">
+        <link rel="stylesheet" href="main_page.css">
+        <link rel="stylesheet" href="map_page.css">
+        <link rel="stylesheet" href="object_pages.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -27,6 +32,34 @@
                     </svg>
                 </li>
             </ul>
+        </div>
+
+        <div id="sidebar">
+            <div id="sidebar_links">
+                <ul id="sidebar_list">
+                    <li><a href="#galvena_lapa" onclick="showContainer('home_page')">Sākuma lapa</a></li>
+                    <li><a href="#galapunkti" onclick="showContainer('destinations_page')">Galapunkti</a></li>
+                    <li><a href="#par_autoru" onclick="showContainer('about_author_page')">Par autoru</a></li>
+                    <li id="sidebar_theme_icon" class="icon-container">
+                        <svg fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" x2="12" y1="1" y2="3"/>
+                            <line x1="12" x2="12" y1="21" y2="23"/>
+                            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"/>
+                            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"/>
+                            <line x1="1" x2="3" y1="12" y2="12"/>
+                            <line x1="21" x2="23" y1="12" y2="12"/>
+                            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"/>
+                            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <a id="sidebar_icon" href="javascript:toggleSidebar();" class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50"> 
+                    <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path> 
+                </svg>
+            </a>
         </div>
 
         <div id="home_page" class="container">
@@ -78,30 +111,12 @@
 
         </div>
 
-        <div id="map_page" class="container" style="display: none;">
-
-            <div id="map_page_header" class="main_header_text">
-                Maršruts uz LU
-            </div>
-
-            <div id="map_page_text">
-                Ceļojumam ir svarīgs novirziens.
-            </div>
-
-            <div id="map_page_image">
-            </div>
-
-        </div>
-
         <div id="destinations_page" class="container" style="display: none;">
             <div class="destination_row">
                 <div id="baldone" class="destination_image" onclick="showContainer('baldone_page')">
                     <div class="image_overlay">
                         <div class="main_header_text">
                             Baldone
-                        </div>
-                        <div class="hover_text">
-                            Baldone - Nospiediet, lai apskatītos
                         </div>
                     </div>
                 </div>
@@ -110,9 +125,6 @@
                     <div class="image_overlay">
                         <div class="main_header_text">
                             Ķekava
-                        </div>
-                        <div class="hover_text">
-                            Ķekava - Nospiediet, lai apskatītos
                         </div>
                     </div>
                 </div>
@@ -124,9 +136,6 @@
                         <div class="main_header_text">
                             Objekti starp Ķekavu un Rīgu
                         </div>
-                        <div class="hover_text">
-                            Objekti starp Ķekavu un Rīgu - Nospiediet, lai apskatītos
-                        </div>
                     </div>
                 </div>
         
@@ -135,27 +144,42 @@
                         <div class="main_header_text">
                             Rīga
                         </div>
-                        <div class="hover_text">
-                            Rīga - Nospiediet, lai apskatītos
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="about_author_page" class="container" style="display: none;">
-            
-            <div class="main_header_text">Par autoru</div>
+        <div id="map_page" class="container" style="display: none;">
 
-            <div class="about_author_info">
+            <div id="map_page_header">Maršruts uz LU</div>
 
-                <div id="about_author_text">
-                    Esmu LU 3.kursa students. 
-                </div>
-
-                <div id="about_author_image"></div>
-
+            <div id="map_page_text">
+                Ceļš no Baldones uz Rīgu ir aptuveni 35 kilometru garš. Ceļu no Baldones uz Rīgu, kas mani pēc tam novedīs uz LU varu veikt dažādos veidos. 
+                Populārākais veids, kā studentam tikt uz Rīgu, lai pēc tam nokļutu uz LU ir ar sabiedrisko transportu, kas ir diezgan izdevīgs - 2 eiro vienā virzienā.  
+                Ar sabedrisko autobusu var redzēt mājaslapā aprakstītos objektus, kas ir pa ceļam uz Latvijas Universitāti. 
             </div>
+
+            <div id="map_page_image"></div>
+            
+        </div>
+
+        <div id="about_author_page" class="container" style="display: none">
+
+            <div id="about_author_header">Par autoru</div>
+
+            <div id="about_author_text">
+                The golden hues of the sunrise filtered through the dense canopy of the ancient forest, casting dappled light on the forest floor.
+                Birds chirped merrily, welcoming the new day, while a gentle breeze rustled the leaves, creating a soothing symphony of nature.
+                Amidst this serene setting, a small deer cautiously emerged from behind a thicket, its eyes wide with curiosity and a hint of caution.
+                The forest was waking up, each creature beginning its daily routine.
+                In a nearby village, the aroma of freshly baked bread wafted through the air, mingling with the scent of morning dew.
+                Villagers stirred from their slumber, ready to embrace the day's tasks.
+                Children laughed and chased each other, their carefree joy echoing through the narrow cobblestone streets.
+                Life was simple yet fulfilling, each day a blend of hard work and communal harmony.
+                As the sun climbed higher, the forest and village thrived, embodying a timeless rhythm of life.
+            </div>
+
+            <div id="about_author_image"></div>
 
         </div>
 

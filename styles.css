@@ -1,108 +1,3 @@
-/* Bildes */
-
-    /* Galvenās lapas bildes */
-    #map {
-        background: url("fire.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #destinations {
-        background: url("fire.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #about_creator {
-        background: url("fire.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Baldone */
-    #baldone_church .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #baldone_school .picture {
-        background-image: url("bildes/baldone_vidusskola.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #baldone_gas_station .picture {
-        background-image: url("bildes/baldone_astarte.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Ķekava */
-    #kekava_phoenix .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #kekava_liba .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #kekava_service .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Objects between */
-    #objects_between_roundabout .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #objects_between_highway .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #objects_between_riga_sign .picture {
-        background-image: url("bildes/baldone_baznica.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Rīga */
-    #riga_bus_station .picture {
-        background-image: url("bildes/riga_autoosta.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #riga_origo .picture {
-        background-image: url("bildes/riga_origo.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #riga_lu .picture {
-        background-image: url("bildes/riga_lu.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
-
-.light-mode {
-    color: black;
-}
-
-.dark-mode {
-    color: white;
-}
-
 /* Html document */
 body {
     margin: 0;
@@ -112,20 +7,6 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
     background-color: #F5EFEF;
-}
-
-.full-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.main_header_text {
-    font-size: 48px;
-}
-
-.paragraph_text {
-    font-size: 36px;
 }
 
 /* Nav bar */
@@ -173,361 +54,76 @@ body {
     border-right: none;
 }
 
+/* Sidebar */
 #sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #0F1D40;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
 }
 
-#sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    transition: 0.3s;
+#sidebar_links ul {
+    display: none;
 }
 
-#sidebar a:hover {
-    color: #a3a4ad;
-}
+/* Side bar */
+@media (max-width: 372px) {
 
-/* Home page */
+    #navbar {
+        display: none;
+    }
 
-    /* Title picture */
-    #home_page {
+    #sidebar {
         display: flex;
+        background-color: #5C7EB7;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 3rem;
+    }
+
+    #sidebar_links {
+        padding-top: 3rem;
+        width: 100%;
+        background-color: #5C7EB7;
+        height: fit-content;
+    }
+
+    #sidebar_links ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        display: none;
         flex-direction: column;
     }
 
-    #home_page_main_picture {
-        position: relative;
-        height: 95vh;
-        width: 100%;
-        background-image: url("fire.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    #home_page_main_picture .image_text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #sidebar_links ul li {
+        display: block;
         text-align: center;
+        border-bottom: 1px solid #000;
+        padding: 14px 16px;
+        text-decoration: none;
+        padding: 10px 0;
     }
-
-    #home_page_main_picture .main_picture_overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Clickable images */
-    #home_page_choices {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    #home_page_choices .clickable_page {
-        position: relative;
-        flex: 1 1 300px; 
-        max-width: 500px;
-        height: 40vh;
-        margin: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    #home_page_choices .clickable_page .image_overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    #home_page_choices .clickable_page .image_overlay::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0);
-    }
-
-    #home_page_choices .clickable_page .image_text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-size: 1.5em;
-    }
-
-    #home_page_choices .clickable_page:hover .image_overlay {
-        transform: scale(1.1); 
-    }
-
-    #home_page_choices .clickable_page:hover {
-        transform: scale(1.05); 
-    }
-
-/* Destinations */
-
-#destinations_page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-#destinations_page .destination_row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#destinations_page .destination_image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50vh;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-#destinations_page .image_overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s ease;
-}
-
-#destinations_page .hover_text {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#destinations_page .destination_image:hover .image_overlay {
-    background: rgba(0, 0, 0, 0.6);
-}
-
-#destinations_page .destination_image:hover .hover_text {
-    opacity: 1;
-}
-
-#riga {
-    background-image: url("bildes/riga.jpeg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* About author page */
-#about_author_page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 95vh;
-    width: 100%;
-}
-
-#about_author_page .main_header_text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30%;
-}
-
-#about_author_page .about_author_info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 70%;
-}
-
-.about_author_info #about_author_text {
-    width: 80vh;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-}
-
-.about_author_info #about_author_image {
-    width: 80vh;
-    height: 60vh;
-    background-image: url("fire.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* Map page */
-#map_page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#map_page #map_page_header {
-    margin-top: 10vh;
-    text-align: center;
-}
-
-#map_page #map_page_text {
-    margin-top: 10vh;
-    text-align: center;
-}
-
-#map_page #map_page_image {
-    margin-top: 10vh;
-    margin-bottom: 5vh;
-    width: 90%;
-    height: 80vh;
-    background-image: url("fire.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-#map_page_image .image_overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Object pages */
-.object_page {
-    display: flex;
-    flex-direction: column;
-}
-
-.object_section {
-    display: flex;
-    flex-direction: row !important;
-    height: 95vh;
-    flex-wrap: wrap;
-}
-
-.object_section .picture {
-    width: 50%;
-}
-
-.object_section .info_panel {
-    width: 50%;
-}
-
-.object_section .info_panel .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    text-align: center;
-    font-size: 48px;
-}
-
-.object_section .info_panel .text {
-    display: flex;
-    justify-content: center;
-    height: 70%;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 24px;
-}
-
-.object_section .odd {
-    background-color: #2D3142;
-}
-
-.object_section .picture {
-    background-image: url("fire.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* Nav bar */
-@media (max-width: 1110px) {
-    .object_section .info_panel .header {
-        font-size: 26px;
-    }
-
-    .object_section .info_panel .text {
-        font-size: 16px;
-    }
-}
-
-/* Galapunkti */
-@media (max-width: 768px) {
     
-    #destinations_page .destination_row {
-        flex-direction: column;
-        flex-wrap: wrap;
+    #sidebar_links ul li a {
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+    
+    #sidebar_links ul li a:hover {
+        background-color: #44688F;
     }
 
-    #destinations_page .destination_image {
-        width: 100%;
-        height: 30vh;
+    #sidebar .icon {
+        height: 24px;
+        width: 24px;
+        padding: 12px;
+        display: block;
+        position: absolute;
     }
 
-    .object_section {
-        flex-direction: column !important;
-        flex-direction: wrap;
-        width: 100%; 
-        height: 40vh;
-    }
-
-    .object_section .picture {
-        width: 100%;
-        order: 2;
-        height: 40vh;
-    }
-
-    .object_section .info_panel {
-        width: 100%;
-        height: 40vh;
-        order: 1; /* Ensure text sections are first in order */
-    }
-
-    .object_section .info_panel .header {
-        font-size: 24px;
-    }
-
-    .object_section .info_panel .text {
-        font-size: 14px;
-    }
 }

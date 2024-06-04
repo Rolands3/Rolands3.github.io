@@ -1,0 +1,29 @@
+/* About author page */
+#about_author_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about_author_page #about_author_header {
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#about_author_page #about_author_text {
+    margin-top: 10vh;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.5rem;
+}
+
+#about_author_page #about_author_image {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    width: 80%;
+    height: 75vh;
+    background-image: url("bildes/karte.jpg");
+    background-position: center;
+}

@@ -1,0 +1,29 @@
+/* Map page */
+#map_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map_page #map_page_header {
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#map_page #map_page_text {
+    margin-top: 10vh;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.5rem;
+}
+
+#map_page #map_page_image {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    width: 80%;
+    height: 75vh;
+    background-image: url("bildes/karte.jpg");
+    background-position: center;
+}

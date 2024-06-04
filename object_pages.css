@@ -1,0 +1,190 @@
+/* Apskates objektu lapu elementi */
+.object_page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.object_section {
+    display: flex;
+    flex-direction: row !important;
+    height: 95vh;
+    flex-wrap: nowrap;
+}
+
+.object_section .picture {
+    width: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+}
+
+.object_section .info_panel {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex: 1;
+    overflow: hidden;
+}
+
+.object_section .info_panel .header {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    height: 30%;
+}
+
+.object_section .info_panel .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55%; 
+    overflow: auto; 
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 1.5rem;
+    box-sizing: border-box; 
+}
+
+.object_section .odd {
+    background-color: #2D3142;
+}
+
+/* Apskates objektu */
+#baldone {
+    background-image: url("bildes/baldone.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#kekava {
+    background-image: url("bildes/kekava.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#on_the_road_object {
+    background-image: url("bildes/objects_between.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#riga {
+    background-image: url("bildes/riga.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Baldone */
+#baldone_church .picture {
+    background-image: url("bildes/baldone_baznica.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#baldone_school .picture {
+    background-image: url("bildes/baldone_vidusskola.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#baldone_gas_station .picture {
+    background-image: url("bildes/baldone_astarte.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ķekava */
+#kekava_phoenix .picture {
+    background-image: url("bildes/kekava_fenikss.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#kekava_liba .picture {
+    background-image: url("bildes/kekava_liba.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#kekava_service .picture {
+    background-image: url("bildes/kekava_serviss.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Objects between */
+#objects_between_roundabout .picture {
+    background-image: url("bildes/objects_circle.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#objects_between_highway .picture {
+    background-image: url("bildes/objects_road.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#objects_between_riga_sign .picture {
+    background-image: url("bildes/objects_riga_sign.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Rīga */
+#riga_bus_station .picture {
+    background-image: url("bildes/riga_autoosta.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#riga_origo .picture {
+    background-image: url("bildes/riga_origo.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#riga_lu .picture {
+    background-image: url("bildes/riga_lu.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1100px) {
+    
+    .object_section {
+        flex-direction: column !important;
+        flex-direction: wrap;
+        width: 100%; 
+        height: auto;
+    }
+
+    .object_section .picture {
+        width: 100%;
+        order: 2;
+        height: 50vh;
+    }
+
+    .object_section .info_panel {
+        width: 100%;
+        height: 40vh;
+        order: 1;
+        height: 50vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+    .object_section .info_panel .header {
+        font-size: 3rem;
+        padding-bottom: 5vh;
+    }
+
+    .object_section .info_panel .text {
+        font-size: 1.5rem;
+    }
+}
