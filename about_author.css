@@ -25,5 +25,6 @@
     width: 80%;
     height: 75vh;
     background-image: url("bildes/par_autoru.jpeg");
+    background-size: cover;
     background-position: center;
 }
